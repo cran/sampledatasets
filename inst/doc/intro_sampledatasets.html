@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>sampledatasets: A collection of Sample DataSets</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">sampledatasets: A collection of Sample
+DataSets</h1>
+
+
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(sampledatasets)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="co">#&gt; Adjuntando el paquete: &#39;dplyr&#39;</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from &#39;package:stats&#39;:</span></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="co">#&gt;     filter, lag</span></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from &#39;package:base&#39;:</span></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span></code></pre></div>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>The <code>sampledatasets</code> package provides a diverse collection
+of sample datasets, covering various fields such as automotive
+performance and safety, historical demographics, socioeconomic
+indicators, and recreational data. <strong>This package serves as a
+valuable resource for researchers and analysts seeking to perform
+analyses and derive insights from classic datasets in R</strong>.</p>
+<div id="dataset-suffixes" class="section level2">
+<h2>Dataset Suffixes</h2>
+<p>Each dataset includes a suffix indicating its format to help users
+identify the data type easily. The suffixes include:</p>
+<p><code>df</code>: A standard data frame. <code>tbl</code>: A tibble
+data frame.</p>
+<div id="example-datasets" class="section level3">
+<h3>Example Datasets</h3>
+<p>The <code>sampledatasets</code> package includes the following
+datasets:</p>
+<ul>
+<li><p>mtcars_df: A data frame containing motor trend car data,
+including miles per gallon, horsepower, and weight.</p></li>
+<li><p>swiss_df: A data frame of Swiss socioeconomic data, including
+fertility rates and education levels.</p></li>
+<li><p>cars_df: A data frame of car speed and stopping distances.
+arbuthnot_tbl: A tibble of historical birth records by year, including
+counts of boys and girls.</p></li>
+<li><p>cards_tbl: A tibble representing a standard 52-card deck,
+including values, suits, and colors.</p></li>
+</ul>
+<p>All datasets in sampledatasets retain their original structure and
+content, ensuring integrity and reliability for analyses.</p>
+</div>
+</div>
+<div id="visualizing-data-with-ggplot2" class="section level2">
+<h2>Visualizing Data with ggplot2</h2>
+<p>To demonstrate the datasets, here are a few visualization examples
+using the ggplot2 package.</p>
+<ol style="list-style-type: decimal">
+<li>Visualization of Miles Per Gallon in Cars</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co"># Example: Scatter plot of miles per gallon vs weight</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>mtcars_df <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Miles Per Gallon vs Weight&quot;</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Weight (1000 lbs)&quot;</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Miles per Gallon&quot;</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;Cylinders&quot;</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img role="img" src="data:image/png;base64,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" /><!-- --></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Distribution of Fertility Rates in Swiss Data</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co"># Example: Histogram of fertility rates</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>swiss_df <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Fertility)) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Distribution of Fertility Rates in Switzerland&quot;</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Fertility Rate&quot;</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Count&quot;</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img role="img" src="data:image/png;base64,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" /><!-- --></p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>The <code>sampledatasets</code> package provides an extensive
+collection of datasets that are useful for a wide range of analyses. The
+suffixes in dataset names make it easy to identify the type of data,
+ensuring an efficient analysis process.</p>
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
+
+</div>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
